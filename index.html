@@ -1,471 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YGWWJ67FW"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-7YGWWJ67FW');
-    </script>
-    <meta name="google-site-verification" content="BC-KataMQCzdk43Bq2dC66KAdrHSAwf4OuLFbRrhlac" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRAND Pest Control & Cleaning Services</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRAND Pest Control & Cleaning Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Montserrat', sans-serif; background-color: #f4f7f6; color: #333; line-height: 1.6; }
     
-    <!-- Google Fonts for Banners -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    header { background: #0b1f3a; color: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+    header .logo { font-size: 1.1rem; font-weight: 800; }
+    nav a { color: #fff; text-decoration: none; margin-left: 12px; font-size: 0.8rem; font-weight: 600; }
     
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background-color: #f4f6f9;
-            color: #333;
-        }
+    .hero { background: linear-gradient(rgba(11, 31, 58, 0.85), rgba(11, 31, 58, 0.85)), url('monsoon-pest-control.jpg.png') center/cover; color: #fff; text-align: center; padding: 50px 20px; }
+    .hero h1 { font-size: 1.6rem; font-weight: 900; margin-bottom: 8px; }
+    .hero h2 { font-size: 0.95rem; color: #e63946; font-weight: 700; margin-bottom: 12px; }
+    .hero p { font-size: 0.85rem; margin-bottom: 20px; opacity: 0.9; }
+    
+    .cta-buttons { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+    .btn { padding: 8px 14px; border-radius: 5px; text-decoration: none; font-weight: 700; font-size: 0.8rem; display: inline-block; }
+    .btn-call { background: #007bff; color: #fff; }
+    .btn-whatsapp { background: #25d366; color: #fff; }
+    .btn-quote { background: #e63946; color: #fff; }
 
-        /* Header & Navigation */
-        header {
-            background-color: #0b1f3a;
-            color: white;
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .logo-text {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #ffffff;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 15px;
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-        nav a:hover {
-            color: #e63946;
-        }
+    section { padding: 30px 5%; }
+    .main-title { font-size: 1.3rem; font-weight: 900; text-align: center; color: #0b1f3a; margin-bottom: 20px; text-transform: uppercase; }
+    .dept-title { font-size: 1rem; font-weight: 800; color: #0b1f3a; border-left: 5px solid #0b4f32; padding-left: 10px; margin-bottom: 15px; }
+    
+    .banner-grid, .services-grid, .work-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+    
+    .card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08); padding: 0; border: none; }
+    .card img { width: 100%; height: auto; display: block; }
+    
+    .service-card { background: #fff; border-radius: 8px; padding: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.06); border-top: 4px solid #0b1f3a; }
+    .service-card h4 { font-size: 1rem; font-weight: 700; color: #0b1f3a; margin-bottom: 8px; }
+    .service-card p { font-size: 0.85rem; color: #555; }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(11, 31, 58, 0.85), rgba(11, 31, 58, 0.85)), url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-        .hero h1 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-            color: #ffffff;
-        }
-        .hero h2 {
-            font-size: 1.3rem;
-            color: #e63946;
-            margin-bottom: 15px;
-        }
-        .hero p {
-            font-size: 1rem;
-            max-width: 700px;
-            margin: 0 auto 25px auto;
-            line-height: 1.5;
-        }
-        .cta-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-        .btn {
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            font-size: 0.95rem;
-        }
-        .btn-call { background-color: #007bff; color: white; }
-        .btn-whatsapp { background-color: #25d366; color: white; }
-        .btn-quote { background-color: #e63946; color: white; }
+    .work-section { background: #e9ecef; }
+    .work-card { background: #fff; border-radius: 8px; overflow: hidden; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .work-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 6px; margin-bottom: 8px; display: block; }
+    .work-card span { font-size: 0.8rem; font-weight: 700; color: #0b1f3a; }
 
-        /* Section Styling */
-        section {
-            padding: 40px 5%;
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .section-title h2 {
-            color: #0b1f3a;
-            font-size: 1.8rem;
-        }
-        .section-title p {
-            color: #666;
-            font-size: 0.95rem;
-            margin-top: 5px;
-        }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+    .feature-card { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .feature-card h4 { font-size: 0.85rem; color: #e63946; margin-bottom: 5px; font-weight: 700; }
+    .feature-card p { font-size: 0.78rem; color: #555; }
 
-        /* Services Grid */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-top: 4px solid #0b1f3a;
-        }
-        .card h3 {
-            color: #0b1f3a;
-            margin-bottom: 10px;
-        }
-        .card p {
-            color: #555;
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
-
-        /* Work Gallery */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 15px;
-        }
-        .gallery-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .gallery-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .gallery-card p {
-            padding: 10px;
-            font-weight: bold;
-            font-size: 0.9rem;
-            color: #0b1f3a;
-        }
-
-        /* Why Choose Us & How It Works */
-        .features-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
-        }
-        .features-list li {
-            background: white;
-            padding: 15px;
-            border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        .features-list strong {
-            color: #e63946;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        /* Contact Section */
-        .contact-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-        }
-        .contact-info h3 {
-            color: #0b1f3a;
-            margin-bottom: 15px;
-        }
-        .contact-info p {
-            margin-bottom: 10px;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-        .contact-form input, .contact-form select, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .contact-form button {
-            width: 100%;
-            background-color: #0b1f3a;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 4px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #0b1f3a;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.85rem;
-            margin-top: 30px;
-        }
-    </style>
+    footer { background: #0b1f3a; color: #fff; text-align: center; padding: 20px; font-size: 0.8rem; }
+  </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="logo-container">
-            <span class="logo-text">BRAND Pest Control</span>
-        </div>
-        <nav>
-            <a href="#departments">Departments</a>
-            <a href="#services">Services</a>
-            <a href="#work">Our Work</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header>
+    <div class="logo">BRAND Pest Control</div>
+    <nav>
+      <a href="#departments">Departments</a>
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+    </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>BRAND Pest Control & Cleaning Services</h1>
-        <h2>Safe • Effective • Reliable</h2>
-        <p>Complete Pest Control & Cleaning Solutions for homes, offices, shops, and commercial properties across Mumbai.</p>
-        <div class="cta-buttons">
-            <a href="tel:9930186640" class="btn btn-call">📞 Call Now</a>
-            <a href="https://wa.me/919930186640" class="btn btn-whatsapp">💬 WhatsApp</a>
-            <a href="#contact" class="btn btn-quote">Get Free Quote</a>
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>BRAND Pest Control & Cleaning Services</h1>
+    <h2>Safe • Effective • Reliable</h2>
+    <p>Complete Pest Control & Cleaning Solutions for homes, offices, shops, and commercial properties across Mumbai.</p>
+    <div class="cta-buttons">
+      <a href="tel:9930186640" class="btn btn-call">📞 Call Now</a>
+      <a href="https://wa.me/919930186640" class="btn btn-whatsapp">💬 WhatsApp</a>
+      <a href="#contact" class="btn btn-quote">Get Free Quote</a>
+    </div>
+  </section>
 
-    <!-- START: DEPARTMENT BANNERS SECTION -->
-        <!-- START: DEPARTMENT BANNERS SECTION -->
-    <main class="services-container" id="departments" style="padding: 20px 5%;">
-      <h2 class="main-title" style="font-family: 'Montserrat', sans-serif; font-weight: 900; text-align: center; color: #0b1f3a; margin: 25px 0;">OUR SPECIALIZED DEPARTMENTS</h2>
+  <!-- 1. SPECIALIZED DEPARTMENTS (TOP IMAGES) -->
+  <section id="departments">
+    <h2 class="main-title">OUR SPECIALIZED DEPARTMENTS</h2>
 
-      <!-- 1. RESIDENTIAL & MONSOON PEST CONTROL -->
-      <section class="department-section" id="residential" style="margin-bottom: 30px; padding: 0;">
-        <h3 class="dept-title" style="font-family: 'Montserrat', sans-serif; font-weight: 800; color: #0b1f3a; border-left: 5px solid #0b4f32; padding-left: 10px; margin-bottom: 15px;">1. Residential & Monsoon Pest Control</h3>
-        <div class="banner-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px;">
-          <div class="card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 0; border: none;">
-            <img src="monsoon-pest-control.jpg.png" alt="Monsoon Alert Uninvited Guests - Brand Pest Control" style="width: 100%; height: auto; display: block;" loading="lazy">
-          </div>
-          <div class="card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 0; border: none;">
-            <img src="miscellaneous-pest-control.jpg.png" alt="Miscellaneous Pest Control Protection - Brand Pest Control" style="width: 100%; height: auto; display: block;" loading="lazy">
-          </div>
-        </div>
-      </section>
+    <!-- 1. Residential & Monsoon -->
+    <div style="margin-bottom: 30px;">
+      <h3 class="dept-title">1. Residential & Monsoon Pest Control</h3>
+      <div class="banner-grid">
+        <div class="card"><img src="monsoon-pest-control.jpg.png" alt="Monsoon Pest Control"></div>
+        <div class="card"><img src="miscellaneous-pest-control.jpg.png" alt="Miscellaneous Pest Control"></div>
+      </div>
+    </div>
 
-      <!-- 2. BED BUG MANAGEMENT -->
-      <section class="department-section" id="bedbug" style="margin-bottom: 30px; padding: 0;">
-        <h3 class="dept-title" style="font-family: 'Montserrat', sans-serif; font-weight: 800; color: #0b1f3a; border-left: 5px solid #0b4f32; padding-left: 10px; margin-bottom: 15px;">2. Bed Bug Management Department</h3>
-        <div class="banner-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px;">
-          <div class="card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 0; border: none;">
-            <img src="bed-bug-solutions.jpg.PNG.png" alt="Residential and Commercial Solutions for Bed Bug" style="width: 100%; height: auto; display: block;" loading="lazy">
-          </div>
-          <div class="card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 0; border: none;">
-            <img src="bed-bug-signs.jpg.png" alt="Signs of Bed Bug Infestation" style="width: 100%; height: auto; display: block;" loading="lazy">
-          </div>
-          <div class="card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 0; border: none;">
-            <img src="bed-bug-warning.jpg.PNG.png" alt="Warning Signs Bed Bug Bites" style="width: 100%; height: auto; display: block;" loading="lazy">
-          </div>
-        </div>
-      </section>
+    <!-- 2. Bed Bug Management -->
+    <div style="margin-bottom: 30px;">
+      <h3 class="dept-title">2. Bed Bug Management Department</h3>
+      <div class="banner-grid">
+        <div class="card"><img src="bed-bug-solutions.jpg.PNG.png" alt="Bed Bug Solutions"></div>
+        <div class="card"><img src="bed-bug-signs.jpg.png" alt="Bed Bug Signs"></div>
+        <div class="card"><img src="bed-bug-warning.jpg.PNG.png" alt="Bed Bug Warning"></div>
+      </div>
+    </div>
 
-      <!-- 3. TERMITE CONTROL -->
-      <section class="department-section" id="termite" style="margin-bottom: 30px; padding: 0;">
-        <h3 class="dept-title" style="font-family: 'Montserrat', sans-serif; font-weight: 800; color: #0b1f3a; border-left: 5px solid #0b4f32; padding-left: 10px; margin-bottom: 15px;">3. Termite & Wood Protection Department</h3>
-        <div class="banner-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px;">
-          <div class="card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 0; border: none;">
-            <img src="termite-control.jpg.png" alt="Professional Termite Eradication Services" style="width: 100%; height: auto; display: block;" loading="lazy">
-          </div>
-        </div>
-      </section>
+    <!-- 3. Termite Control -->
+    <div style="margin-bottom: 30px;">
+      <h3 class="dept-title">3. Termite & Wood Protection Department</h3>
+      <div class="banner-grid">
+        <div class="card"><img src="termite-control.jpg.png" alt="Termite Control"></div>
+      </div>
+    </div>
 
-      <!-- 4. COCKROACH & RODENT CONTROL -->
-      <section class="department-section" id="kitchen-hygiene" style="margin-bottom: 30px; padding: 0;">
-        <h3 class="dept-title" style="font-family: 'Montserrat', sans-serif; font-weight: 800; color: #0b1f3a; border-left: 5px solid #0b4f32; padding-left: 10px; margin-bottom: 15px;">4. Cockroach & Rodent Control Department</h3>
-        <div class="banner-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px;">
-          <div class="card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 0; border: none;">
-            <img src="pest-treatment.jpg.png" alt="Why Cockroach Infestations Are Dangerous" style="width: 100%; height: auto; display: block;" loading="lazy">
-          </div>
-          <div class="card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 0; border: none;">
-            <img src="rodent-control.jpg.png" alt="Signs of Rodent Infestation" style="width: 100%; height: auto; display: block;" loading="lazy">
-          </div>
-        </div>
-      </section>
+    <!-- 4. Cockroach & Rodent Control -->
+    <div style="margin-bottom: 30px;">
+      <h3 class="dept-title">4. Cockroach & Rodent Control Department</h3>
+      <div class="banner-grid">
+        <div class="card"><img src="pest-treatment.jpg.png" alt="Pest Treatment"></div>
+        <div class="card"><img src="rodent-control.jpg.png" alt="Rodent Control"></div>
+      </div>
+    </div>
 
-      <!-- 5. VECTOR & FLY CONTROL -->
-      <section class="department-section" id="vector-control" style="margin-bottom: 30px; padding: 0;">
-        <h3 class="dept-title" style="font-family: 'Montserrat', sans-serif; font-weight: 800; color: #0b1f3a; border-left: 5px solid #0b4f32; padding-left: 10px; margin-bottom: 15px;">5. Mosquito & Fly Management Department</h3>
-        <div class="banner-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px;">
-          <div class="card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 0; border: none;">
-            <img src="fly-mosquito-control.jpg.png" alt="Comprehensive Pest and Fly Control Services" style="width: 100%; height: auto; display: block;" loading="lazy">
-          </div>
-        </div>
-      </section>
-    </main>
-    <!-- END: DEPARTMENT BANNERS SECTION -->
+    <!-- 5. Mosquito & Fly Management -->
+    <div style="margin-bottom: 30px;">
+      <h3 class="dept-title">5. Mosquito & Fly Management Department</h3>
+      <div class="banner-grid">
+        <div class="card"><img src="fly-mosquito-control.jpg.png" alt="Fly and Mosquito Control"></div>
+      </div>
+    </div>
+  </section>
 
+  <!-- 2. SERVICES SECTION -->
+  <section id="services" style="background: #fff;">
+    <h2 class="main-title">OUR SERVICES</h2>
+    <p style="text-align: center; color: #666; font-size: 0.85rem; margin-top: -15px; margin-bottom: 25px;">Professional Solutions for Every Property</p>
+    <div class="services-grid">
+      <div class="service-card"><h4>Cockroach Control</h4><p>Professional treatment designed to address cockroach problems in residential and commercial spaces.</p></div>
+      <div class="service-card"><h4>Ant Control</h4><p>Targeted pest-management solutions for common ant infestations and recurring problems.</p></div>
+      <div class="service-card"><h4>Termite Control</h4><p>Property-focused termite inspection and treatment solutions. Contact us for assessment.</p></div>
+      <div class="service-card"><h4>Rodent Control</h4><p>Practical solutions to help manage rodent activity and protect your property.</p></div>
+      <div class="service-card"><h4>Fly & Mosquito Control</h4><p>Professional pest-management options including outdoor and indoor fogging treatments.</p></div>
+      <div class="service-card"><h4>Deep Cleaning</h4><p>Detailed cleaning solutions for homes, offices, shops, and commercial environments.</p></div>
+    </div>
+  </section>
 
-    <!-- Services Section -->
-    <section id="services">
-        <div class="section-title">
-            <h2>OUR SERVICES</h2>
-            <p>Professional Solutions for Every Property</p>
-        </div>
-        <div class="grid-container">
-            <div class="card">
-                <h3>Cockroach Control</h3>
-                <p>Professional treatment designed to address cockroach problems in residential and commercial spaces.</p>
-            </div>
-            <div class="card">
-                <h3>Ant Control</h3>
-                <p>Targeted pest-management solutions for common ant infestations and recurring problems.</p>
-            </div>
-            <div class="card">
-                <h3>Termite Control</h3>
-                <p>Property-focused termite inspection and treatment solutions. Contact us for assessment.</p>
-            </div>
-            <div class="card">
-                <h3>Rodent Control</h3>
-                <p>Practical solutions to help manage rodent activity and protect your property.</p>
-            </div>
-            <div class="card">
-                <h3>Fly & Mosquito Control</h3>
-                <p>Professional pest-management options including outdoor and indoor fogging treatments.</p>
-            </div>
-            <div class="card">
-                <h3>Deep Cleaning</h3>
-                <p>Detailed cleaning solutions for homes, offices, shops, and commercial environments.</p>
-            </div>
-        </div>
-    </section>
+  <!-- 3. OUR WORK IN ACTION (ALL GALLERY IMAGES) -->
+  <section id="work" class="work-section">
+    <h2 class="main-title">OUR WORK IN ACTION</h2>
+    <p style="text-align: center; color: #666; font-size: 0.85rem; margin-top: -15px; margin-bottom: 25px;">Real service photographs across offices, kitchens, washrooms, and commercial spaces</p>
+    <div class="work-grid">
+      <div class="work-card"><img src="work1.jpg.jpg" alt="Work 1"><span>Mosquito & Outdoor Fogging #1</span></div>
+      <div class="work-card"><img src="work2.jpg.jpg" alt="Work 2"><span>Commercial Kitchen Treatment #2</span></div>
+      <div class="work-card"><img src="work10.jpg.jpg" alt="Work 10"><span>Washroom Disinfection #3</span></div>
+      <div class="work-card"><img src="work11.jpg.jpg" alt="Work 11"><span>Rodent Trapping #4</span></div>
+      <div class="work-card"><img src="work12.jpg.jpg" alt="Work 12"><span>Cockroach Gel Treatment #5</span></div>
+      <div class="work-card"><img src="work13.jpg.jpg" alt="Work 13"><span>Corporate Office Treatment #6</span></div>
+      <div class="work-card"><img src="work14.jpg.jpg" alt="Work 14"><span>Industrial Fogging #7</span></div>
+      <div class="work-card"><img src="work15.jpg.jpg" alt="Work 15"><span>Certified Inspection #8</span></div>
+      <div class="work-card"><img src="work16.jpg.jpg" alt="Work 16"><span>Bed Bug Extermination #9</span></div>
+      <div class="work-card"><img src="work17.jpg.jpg" alt="Work 17"><span>Termite Treatment #10</span></div>
+      <div class="work-card"><img src="work18.jpg.jpg" alt="Work 18"><span>Ant Extermination #11</span></div>
+      <div class="work-card"><img src="work19.jpg.jpg" alt="Work 19"><span>General Pest Control #12</span></div>
+      <div class="work-card"><img src="work20.jpg.jpg" alt="Work 20"><span>Mosquito Fogging #13</span></div>
+      <div class="work-card"><img src="work21.jpg.jpg" alt="Work 21"><span>Commercial Kitchen #14</span></div>
+    </div>
+  </section>
 
-    <!-- OUR WORK IN ACTION SECTION (30 PHOTOS) -->
-    <section id="work" style="padding: 50px 5%; background-color: #e9ecef;">
-        <div class="section-title">
-            <h2>OUR WORK IN ACTION</h2>
-            <p>Real service photographs across offices, kitchens, washrooms, and commercial spaces</p>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-card"><img src="work1.jpg" alt="Mosquito & Outdoor Fogging"><p>Mosquito & Outdoor Fogging #1</p></div>
-            <div class="gallery-card"><img src="work2.jpg" alt="Commercial Kitchen Treatment"><p>Commercial Kitchen Treatment #2</p></div>
-            <div class="gallery-card"><img src="work3.jpg" alt="Washroom Disinfection & Spray"><p>Washroom Disinfection & Spray #3</p></div>
-            <div class="gallery-card"><img src="work4.jpg" alt="Rodent Trapping & Control"><p>Rodent Trapping & Control #4</p></div>
-            <div class="gallery-card"><img src="work5.jpg" alt="Cockroach Gel & Monitoring"><p>Cockroach Gel & Monitoring #5</p></div>
-            <div class="gallery-card"><img src="work6.jpg" alt="Corporate Office Pest Control"><p>Corporate Office Pest Control #6</p></div>
-            <div class="gallery-card"><img src="work7.jpg" alt="Industrial & Drain Fogging"><p>Industrial & Drain Fogging #7</p></div>
-            <div class="gallery-card"><img src="work8.jpg" alt="Certified Pest Inspection"><p>Certified Pest Inspection #8</p></div>
-            <div class="gallery-card"><img src="work9.jpg" alt="Bed Bug Extermination"><p>Bed Bug Extermination #9</p></div>
-            <div class="gallery-card"><img src="work10.jpg" alt="Termite Treatment & Control"><p>Termite Treatment & Control #10</p></div>
-            <div class="gallery-card"><img src="work11.jpg" alt="Ant Extermination"><p>Ant Extermination #11</p></div>
-            <div class="gallery-card"><img src="work12.jpg" alt="General Pest Control"><p>General Pest Control #12</p></div>
-            <div class="gallery-card"><img src="work13.jpg" alt="Mosquito & Outdoor Fogging"><p>Mosquito & Outdoor Fogging #13</p></div>
-            <div class="gallery-card"><img src="work14.jpg" alt="Commercial Kitchen Treatment"><p>Commercial Kitchen Treatment #14</p></div>
-            <div class="gallery-card"><img src="work15.jpg" alt="Washroom Disinfection & Spray"><p>Washroom Disinfection & Spray #15</p></div>
-            <div class="gallery-card"><img src="work16.jpg" alt="Rodent Trapping & Control"><p>Rodent Trapping & Control #16</p></div>
-            <div class="gallery-card"><img src="work17.jpg" alt="Cockroach Gel & Monitoring"><p>Cockroach Gel & Monitoring #17</p></div>
-            <div class="gallery-card"><img src="work18.jpg" alt="Corporate Office Pest Control"><p>Corporate Office Pest Control #18</p></div>
-            <div class="gallery-card"><img src="work19.jpg" alt="Industrial & Drain Fogging"><p>Industrial & Drain Fogging #19</p></div>
-            <div class="gallery-card"><img src="work20.jpg" alt="Certified Pest Inspection"><p>Certified Pest Inspection #20</p></div>
-            <div class="gallery-card"><img src="work21.jpg" alt="Bed Bug Extermination"><p>Bed Bug Extermination #21</p></div>
-            <div class="gallery-card"><img src="work22.jpg" alt="Termite Treatment & Control"><p>Termite Treatment & Control #22</p></div>
-            <div class="gallery-card"><img src="work23.jpg" alt="Ant Extermination"><p>Ant Extermination #23</p></div>
-            <div class="gallery-card"><img src="work24.jpg" alt="General Pest Control"><p>General Pest Control #24</p></div>
-            <div class="gallery-card"><img src="work25.jpg" alt="Mosquito & Outdoor Fogging"><p>Mosquito & Outdoor Fogging #25</p></div>
-            <div class="gallery-card"><img src="work26.jpg" alt="Commercial Kitchen Treatment"><p>Commercial Kitchen Treatment #26</p></div>
-            <div class="gallery-card"><img src="work27.jpg" alt="Washroom Disinfection & Spray"><p>Washroom Disinfection & Spray #27</p></div>
-            <div class="gallery-card"><img src="work28.jpg" alt="Rodent Trapping & Control"><p>Rodent Trapping & Control #28</p></div>
-            <div class="gallery-card"><img src="work29.jpg" alt="Cockroach Gel & Monitoring"><p>Cockroach Gel & Monitoring #29</p></div>
-            <div class="gallery-card"><img src="work30.jpg" alt="Corporate Office Pest Control"><p>Corporate Office Pest Control #30</p></div>
-        </div>
-    </section>
+  <!-- Why Choose Us -->
+  <section style="background: #fff;">
+    <h2 class="main-title">WHY BRAND PEST CONTROL?</h2>
+    <div class="features-grid">
+      <div class="feature-card"><h4>✓ Safe & Effective</h4><p>Service planned around your specific property needs.</p></div>
+      <div class="feature-card"><h4>✓ Reliable Support</h4><p>Clear communication and professional support.</p></div>
+      <div class="feature-card"><h4>✓ Modern Approach</h4><p>Practical solutions for different environments.</p></div>
+      <div class="feature-card"><h4>✓ Customer Focused</h4><p>Your requirement always comes first.</p></div>
+    </div>
+  </section>
 
-    <!-- Why Choose Us -->
-    <section>
-        <div class="section-title">
-            <h2>WHY BRAND PEST CONTROL?</h2>
-            <p>Protection You Can Feel Confident About</p>
-        </div>
-        <ul class="features-list">
-            <li><strong>✓ Safe & Effective</strong> Service planned around your specific property needs.</li>
-            <li><strong>✓ Reliable Support</strong> Clear communication and professional support.</li>
-            <li><strong>✓ Modern Approach</strong> Practical solutions for different environments.</li>
-            <li><strong>✓ Customer Focused</strong> Your requirement always comes first.</li>
-        </ul>
-    </section>
-
-    <!-- Contact & Booking Section -->
-    <section id="contact">
-        <div class="section-title">
-            <h2>GET IN TOUCH</h2>
-            <p>Tell us about your requirement and request a free quote</p>
-        </div>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Contact Details</h3>
-                <p><strong>Contact Persons:</strong> Pravin Lokande / Sanket Yelve</p>
-                <p><strong>📞 Phone:</strong> 9930186640 / 9664368992</p>
-                <p><strong>💬 WhatsApp:</strong> 9930186640 / 9664368992</p>
-                <p><strong>✉️ Email:</strong> lokandepravin344@gmail.com</p>
-                <p><strong>📍 Address:</strong> Office No. 75, Building No. 3, Nirmal Nagar, MHB Colony, Bandra East, Mumbai - 400051</p>
-            </div>
-
-            <div class="contact-form">
-                <form action="#">
-                    <input type="text" placeholder="Full Name" required>
-                    <input type="tel" placeholder="Mobile Number" required>
-                    <select required>
-                        <option value="">Select Service</option>
-                        <option>Cockroach Control</option>
-                        <option>Termite Control</option>
-                        <option>Rodent Control</option>
-                        <option>Deep Cleaning</option>
-                    </select>
-                    <input type="text" placeholder="Area / Location" required>
-                    <textarea rows="3" placeholder="Tell us about your requirement"></textarea>
-                    <button type="submit">Request Free Quote</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 BRAND Pest Control and Cleaning Services. All rights reserved.</p>
-        <p>Protecting What Matters Most.</p>
-    </footer>
+  <footer>
+    <p>&copy; BRAND Pest Control & Cleaning Services. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
